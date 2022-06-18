@@ -13,12 +13,12 @@ namespace WeatherAPI.Services
 {
     public class WeatherService
     {       
-        public async Task<CountryWeather.Root?>GetCountryWeather()
+        public async Task<CountryWeather?>GetCountryWeather()
         {
             try
             {
                 var content = await WebMethods.MakeGetRequest(EndpointConstants.GetWeather);
-                return JsonConvert.DeserializeObject<CountryWeather.Root?>(content);
+                return JsonConvert.DeserializeObject<CountryWeather?>(content);
             }
             catch (Exception e)
             {
