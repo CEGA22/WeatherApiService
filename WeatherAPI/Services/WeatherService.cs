@@ -21,8 +21,7 @@ namespace WeatherAPI.Services
                 return JsonConvert.DeserializeObject<CountryWeather?>(content);
             }
             catch (Exception e)
-            {
-                var x = e.Message;
+            {              
                 return null;
             }
         }
@@ -39,8 +38,7 @@ namespace WeatherAPI.Services
                 }
             }
             catch (Exception e)
-            {
-                var x = e.Message;
+            {              
                 return null;
             }
         }
